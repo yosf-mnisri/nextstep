@@ -1,0 +1,68 @@
+body {
+    background-color: #fff; /* Fond blanc */
+    color: #000; /* Texte noir */
+}
+
+.profile-container {
+    display: flex;
+    height: 100vh;
+    background-color: #fff; /* Fond blanc */
+}
+
+.sidebar {
+    background-color: #000; /* Fond noir */
+    color: white; /* Texte blanc */
+    padding: 20px;
+    width: 250px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar h2 {
+    margin: 0;
+    color: #fff;
+}
+
+.sidebar h3 {
+    color: #ccc; /* Texte gris clair */
+}
+
+.sidebar button {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #444; /* Couleur de fond pour les boutons */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sidebar button:hover {
+    background-color: #666; /* Couleur au survol */
+}
+
+.profile-card {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.profile-photo {
+    width: 250px; /* Taille de l'image */
+    height: 250px; /* Taille de l'image */
+    border-radius: 10px;
+    margin-right: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.section-content {
+    max-width: 500px;
+    text-align: left;
+    background-color: white; /* Fond blanc pour le contenu */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
