@@ -2,7 +2,7 @@
   "name": "nextstep",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://<yosf-mnisri>.github.io/<nextstep>",
+  "homepage": "https://yosf-mnisri.github.io/nextstep",
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.6.4",
