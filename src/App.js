@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import './i18n';
 import './App.css';
@@ -12,9 +12,11 @@ import Jobs from './components/Jobs';
 import Stages from './components/Stages';
 import Concours from './components/Concours';
 import VisitCounter from './components/VisitCounter';
+import LoginPage from './components/LoginPage';
 
 function App() {
   const { t, i18n } = useTranslation();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const userId = 'user123';
 
   useEffect(() => {
@@ -25,49 +27,55 @@ function App() {
   return (
     <Router basename="/nextstep">
       <div className="App">
-        {/* Langue selector */}
-        <div style={{
-          display: 'flex',
-          justifyContent: i18n.language === 'ar' ? 'flex-start' : 'flex-end',
-          padding: '1rem'
-        }}>
-          <label htmlFor="lang-select" style={{ marginRight: '0.5rem' }}>
-            {t('language')}:
-          </label>
-          <select
-            id="lang-select"
-            onChange={(e) => i18n.changeLanguage(e.target.value)}
-            value={i18n.language}
-          >
-            <option value="en">English</option>
-            <option value="fr">Français</option>
-            <option value="ar">العربية</option>
-          </select>
-        </div>
+        {!isLoggedIn ? (
+          <LoginPage onLogin={setIsLoggedIn} />
+        ) : (
+          <>
+            {/* Langue selector */}
+            <div style={{
+              display: 'flex',
+              justifyContent: i18n.language === 'ar' ? 'flex-start' : 'flex-end',
+              padding: '1rem'
+            }}>
+              <label htmlFor="lang-select" style={{ marginRight: '0.5rem' }}>
+                {t('language')}:
+              </label>
+              <select
+                id="lang-select"
+                onChange={(e) => i18n.changeLanguage(e.target.value)}
+                value={i18n.language}
+              >
+                <option value="en">English</option>
+                <option value="fr">Français</option>
+                <option value="ar">العربية</option>
+              </select>
+            </div>
 
-        {/* Composants */}
-        <VisitCounter userId={userId} />
-        <Header />
+            <VisitCounter userId={userId} />
+            <Header />
 
-        <main>
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <>
-                  <MainContent />
-                  <VisitCounter userId={userId} />
-                </>
-              }
-            />
-            <Route path="/Profile" element={<Profile />} />
-            <Route path="/Jobs" element={<Jobs />} />
-            <Route path="/Stages" element={<Stages />} />
-            <Route path="/Concours" element={<Concours />} />
-          </Routes>
-        </main>
+            <main>
+              <Routes>
+                <Route
+                  path="/"
+                  element={
+                    <>
+                      <MainContent />
+                      <VisitCounter userId={userId} />
+                    </>
+                  }
+                />
+                <Route path="/Profile" element={<Profile />} />
+                <Route path="/Jobs" element={<Jobs />} />
+                <Route path="/Stages" element={<Stages />} />
+                <Route path="/Concours" element={<Concours />} />
+                <Route path="*" element={<Navigate to="/" />} />
+              </Routes>
+            </main>
 
-        <Footer />
+            <Footer />
+          </>
+        )}
       </div>
     </Router>
   );
