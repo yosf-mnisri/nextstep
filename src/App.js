@@ -14,7 +14,10 @@ function App() {
 
   // Incrémente le compteur à chaque chargement du composant
   useEffect(() => {
-    setVisitCount(prevCount => prevCount + 1);
+    const storedCount = localStorage.getItem('visitCount');
+    const newCount = storedCount ? parseInt(storedCount) + 1 : 1;
+    localStorage.setItem('visitCount', newCount);
+    setVisitCount(newCount);
   }, []);
 
   return (
