@@ -45,7 +45,6 @@ function Stages() {
         </button>
       </div>
       <div className="ads-section">
-        <h2>Annonces</h2>
         {/* Intégration des annonces Google Ads */}
         <iframe
           src="https://www.profitableratecpm.com/b9gz1b6sx?key=e1c5ad83639643368d0bda4e813f4875"
