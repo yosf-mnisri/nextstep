@@ -44,17 +44,30 @@ function Jobs() {
           Suivant
         </button>
       </div>
-      <div className="ads-section">
-        <h2>Annonces</h2>
-        {/* Ici, vous pouvez intégrer Google Ads */}
-        <iframe
-          src="https://www.profitableratecpm.com/ifvpz5m6s?key=7facd57b8b8c59971c30b164d05302e5"
-          width="100%"
-          height="250"
-          title="Google Ads"
-          style={{ border: 'none' }}
-        ></iframe>
-      </div>
+      <div className="ads-container">
+
+  <div className="ads-section">
+    <div className="ad" style={{ width: '60px' }}>
+      <a href="https://beta.publishers.adsterra.com/referral/3mhu5DtZSq" rel="nofollow">
+        <img 
+          alt="Annonce 1" 
+          src="https://landings-cdn.adsterratech.com/referralBanners/png/80%20x%2030%20px.png" 
+          style={{ width: '100%', height: 'auto' }} 
+        />
+      </a>
+    </div>
+     
+   
+    
+  </div>
+</div>
+    
+  
+
+ 
+ 
+  
+
     </div>
   );
 }

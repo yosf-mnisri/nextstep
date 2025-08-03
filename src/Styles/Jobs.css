@@ -33,3 +33,49 @@
   border: 1px dashed #007bff;
   text-align: center;
 }
+.ads-section {
+  display: flex; /* Utiliser flexbox pour un layout horizontal */
+  justify-content: space-between; /* Espacement entre les annonces */
+  margin: 20px 0; /* Espacement autour de la section */
+  overflow-x: auto; /* Permettre le défilement horizontal si nécessaire */
+}
+
+.ad {
+  flex: 0 0 30%; /* Chaque annonce prend 30% de la largeur */
+  max-width: 30%; /* Limiter la largeur maximum à 30% */
+  margin: 10px; /* Espacement autour de chaque annonce */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  border-radius: 5px; /* Arrondir les coins */
+  overflow: hidden; /* Assurer que le contenu ne déborde pas */
+}
+
+.ad iframe {
+  width: 100%; /* Occuper toute la largeur de l'annonce */
+  height: 200px; /* Hauteur de chaque annonce */
+}
+
+
+
+
+.ad iframe {
+  width: 100%; /* Occuper toute la largeur de l'annonce */
+  height: 100px; /* Hauteur de chaque annonce */
+}
+
+.ads-section {
+  display: flex; /* Utiliser flexbox pour un layout horizontal */
+  justify-content: space-between; /* Espacement entre les annonces */
+  margin: 20px 0; /* Espacement autour de la section */
+  overflow-x: auto; /* Permettre le défilement horizontal si nécessaire */
+}
+
+.ad {
+  flex: 0 0 10%; /* Chaque annonce prend 10% de la largeur */
+  max-width: 10%; /* Limiter la largeur maximum à 10% */
+  margin: 5px; /* Espacement autour de chaque annonce */
+}
+
+.separator {
+  flex: 0 0 2%; /* Occupation d'un espace réduit pour les séparateurs */
+  max-width: 2%; /* Limiter la largeur maximum à 2% */
+}
