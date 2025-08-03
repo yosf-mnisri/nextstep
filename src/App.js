@@ -18,7 +18,7 @@ function App() {
   }, []);
 
   return (
-    <Router>
+    <Router basename="/nextstep">
       <div className="App">
         <Header />
         <main>
