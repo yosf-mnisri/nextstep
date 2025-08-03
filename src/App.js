@@ -11,7 +11,7 @@ import Concours from './components/Concours';
 
 function App() {
   return (
-    <Router basename="/nextstep">
+    <Router>
       <div className="App">
         <Header />
         <main>

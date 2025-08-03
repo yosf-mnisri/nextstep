@@ -53,6 +53,7 @@ function Profile() {
             <p>Phone: {profileData.contact.phone}</p>
           </div>
         );
+        
       default:
         return null;
     }
