@@ -1,0 +1,11 @@
+.footer {
+    position: fixed; /* Fixe le footer en bas */
+    bottom: 0; /* Positionne le footer en bas de la page */
+    left: 0; /* Aligne à gauche */
+    width: 100%; /* Prend toute la largeur */
+    background-color: #black; /* Couleur de fond */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Ombre */
+    padding: 10px; /* Espacement interne */
+    text-align: center; /* Centre le texte */
+    z-index: 1000; /* Assure que le footer soit au-dessus du contenu */
+}

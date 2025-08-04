@@ -1,0 +1,20 @@
+.visit-counter {
+  position: fixed; /* Position fixe pour rester à droite */
+  top: 50%; /* Centre verticalement */
+  right: 20px; /* Éloignement du côté droit */
+  transform: translateY(-50%); /* Ajuste pour centrer parfaitement */
+  width: 100px; /* Largeur du cercle */
+  height: 100px; /* Hauteur du cercle */
+  border-radius: 50%; /* Bordures arrondies pour faire un cercle */
+  background-color: #f9f9f9; /* Couleur de fond */
+  color: blue; /* Couleur du texte */
+  display: flex; /* Utiliser flexbox pour centrer le contenu */
+  flex-direction: column; /* Empiler le texte verticalement */
+  align-items: center; /* Centrer horizontalement */
+  justify-content: center; /* Centrer verticalement */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  font-size: 1em; /* Taille de la police */
+  border: 1px solid lightgray; /* Bordure autour du cercle */
+  text-align: center; /* Centrer le texte */
+  padding: 10px; /* Espacement intérieur */
+}
