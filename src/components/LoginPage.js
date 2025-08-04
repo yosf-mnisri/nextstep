@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../Styles/LoginPage.css";
-import { auth, provider } from "../firebase"; // adapte le chemin si besoin
+import { auth, provider } from "../firebase";
 import { signInWithPopup } from "firebase/auth";
 
 export default function LoginPage({ onLogin }) {
@@ -20,7 +20,7 @@ export default function LoginPage({ onLogin }) {
       const result = await signInWithPopup(auth, provider);
       const user = result.user;
       console.log("Connecté via Google :", user.displayName);
-      onLogin(true); // ou passe l'objet user si tu veux l'exploiter
+      onLogin(true); // Tu peux aussi passer l'objet user si besoin
     } catch (error) {
       console.error("Erreur Google Sign-in :", error);
       alert("Échec de la connexion Google");
